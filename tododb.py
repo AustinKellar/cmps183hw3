@@ -15,54 +15,54 @@ def create_table():
 def insert_data():
 	title = 'Create a profile for Peter Parker'
 	notes = 'These are the notes for creating such a profile'
-	posted = datetime.datetime(2018, 2, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 2, 3, 0, 0)
-	due = datetime.datetime(2018, 2, 5, 0, 0)
+	posted = datetime.datetime(2018, 2, 2)
+	lastUpdated = datetime.datetime(2018, 2, 3)
+	due = datetime.datetime(2018, 2, 5)
 	completed = False
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()
 
 	title = 'Create a todo list for Peter Parker'
 	notes = 'These are the notes for creating such a todo list'
-	posted = datetime.datetime(2018, 3, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 3, 3, 0, 0)
-	due = datetime.datetime(2018, 3, 5, 0, 0)
+	posted = datetime.datetime(2018, 3, 2)
+	lastUpdated = datetime.datetime(2018, 3, 3)
+	due = datetime.datetime(2018, 3, 5)
 	completed = True
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()
 
 	title = 'Create a submit form for todo list'
 	notes = 'These are the notes for creating such a form'
-	posted = datetime.datetime(2018, 4, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 4, 3, 0, 0)
-	due = datetime.datetime(2018, 4, 5, 0, 0)
+	posted = datetime.datetime(2018, 4, 2)
+	lastUpdated = datetime.datetime(2018, 4, 3)
+	due = datetime.datetime(2018, 4, 5)
 	completed = False
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()
 
 	title = 'Make some lunch'
 	notes = 'Remember to buy food before making lunch'
-	posted = datetime.datetime(2018, 5, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 5, 3, 0, 0)
-	due = datetime.datetime(2018, 5, 5, 0, 0)
+	posted = datetime.datetime(2018, 5, 2)
+	lastUpdated = datetime.datetime(2018, 5, 3)
+	due = datetime.datetime(2018, 5, 5)
 	completed = True
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()
 
 	title = 'Eat some lunch'
 	notes = 'Eat the lunch I just made'
-	posted = datetime.datetime(2018, 6, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 6, 3, 0, 0)
-	due = datetime.datetime(2018, 6, 5, 0, 0)
+	posted = datetime.datetime(2018, 6, 2)
+	lastUpdated = datetime.datetime(2018, 6, 3)
+	due = datetime.datetime(2018, 6, 5)
 	completed = False
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()
 
 	title = 'Turn in this assignment'
 	notes = 'This assignment is due soon'
-	posted = datetime.datetime(2018, 7, 2, 0, 0)
-	lastUpdated = datetime.datetime(2018, 7, 3, 0, 0)
-	due = datetime.datetime(2018, 7, 5, 0, 0)
+	posted = datetime.datetime(2018, 7, 2)
+	lastUpdated = datetime.datetime(2018, 7, 3)
+	due = datetime.datetime(2018, 7, 5)
 	completed = False
 	c.execute("INSERT INTO tasks(title, notes, posted, lastUpdated, due, completed) VALUES(?,?,?,?,?,?)", (title, notes, posted, lastUpdated, due, completed))
 	conn.commit()

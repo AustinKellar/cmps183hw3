@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Permanent+Marker" />
+		<script src="scripts/script.js"></script>
 		<title>HW3</title>
 		<meta charset="utf-8"/>
 	</head>
@@ -38,13 +39,21 @@
 							<th>Edit</th>
 							<th>Delete</th>
 						</tr>
-						%for rowidx, row in enumerate(rows):
+						%for row in rows:
 							<tr>
-								%for colidx, col in enumerate(row):
-									<td>{{col}}</td>	
+								<td>{{row['id']}}</td>
+								<td>{{row['title']}}</td>
+								<td>{{row['notes']}}</td>
+								<td>{{row['posted']}}</td>
+								<td>{{row['lastUpdated']}}</td>
+								<td>{{row['due']}}</td>
+								%if(row['completed']):
+									<td><input type="checkbox" style="margin: auto; display: block;" onclick='clickCheckbox(this, {{row['id']}});' checked></td>
+								%else:
+									<td><input type="checkbox" style="margin: auto; display: block;" onclick='clickCheckbox(this, {{row['id']}});'></td>
 								%end
-								<td><a href="/edit/{{rows[rowidx][0]}}">Edit</a></td>
-								<td><a href="/delete/{{rows[rowidx][0]}}">Delete</a></td>
+								<td><a href="/edit/{{row['id']}}">Edit</a></td>
+								<td><a href="/delete/{{row['id']}}">Delete</a></td>
 							</tr>
 						%end
 					</table>

@@ -144,7 +144,8 @@ select::-ms-expand {
     display: none;
 }
 
-textarea, input[type=date] {
+
+textarea, input[type=date], input[type=text] {
     background-color: #b0bffc;
     border: none;
     resize: none;

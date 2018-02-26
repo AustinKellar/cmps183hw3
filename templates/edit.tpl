@@ -17,19 +17,64 @@
 			<div class="navbar white marker">
 				<ul>
 					<li><a href="/index">Home</a></li>
-					<li><a href="/todo">To Do</a></li>
+					<li><a href="/list">To Do</a></li>
 					<li><a href="/new">To Do Form</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="main-body">
-			<input value="{{rows[0]}}"><br>
-			<input value="{{rows[1]}}"><br>
-			<input value="{{rows[2]}}"><br>
-			<input value="{{rows[3]}}"><br>
-			<input value="{{rows[4]}}"><br>
-			<input value="{{rows[5]}}"><br>
-			<input value="{{rows[6]}}">
+			<form action='/update' method='post'>
+				<div class="row" style="padding-left: 20px;">
+					<div class="col-sm-4">
+						<label>ID:   </label>
+						<input style="background-color:#f21f1f; border: none;" name="id" size="2" value="{{row['id']}}">
+					</div>
+				</div><br>
+				<div class="row" style="padding-left: 20px;">
+					<div class="col-sm-4">
+						<label>Title</label><br>
+						<textarea name="title">{{row['title']}}</textarea>
+					</div>
+					<div class="col-sm-4">
+						<label>Notes</label><br>
+						<textarea name="notes">{{row['notes']}}</textarea>
+					</div>
+					<div class="col-sm-4">
+						<label>Status</label><br>
+						%if(not row['completed']):
+							<select name="completed">
+								<option value="0">Not Completed</option>
+								<option value="1">Completed</option>
+							</select>
+						%else:
+							<select name="completed">
+								<option value="1">Completed</option>
+								<option value="0">Not Completed</option>
+							</select>
+						%end
+					</div>
+				</div><br>
+				<div class="row" style="padding-left: 20px;">
+					<div class="col-sm-4">
+						<label>Posted</label><br>
+						<input name="posted" type="date" value="{{row['posted']}}">
+					</div>
+					<div class="col-sm-4">
+						<label>Last Updated</label><br>
+						<input name="lastUpdated" type="date" value="{{row['lastUpdated']}}">
+					</div>
+					<div class="col-sm-4">
+						<label>Due</label><br>
+						<input name="due" type="date" value="{{row['due']}}">
+					</div>
+				</div>
+				<div class="row" style="padding-left: 20px;">
+					<div class="col-sm-4">
+						<br>
+						<input type="submit" name="save" value="save">
+					</div>
+				</div>
+			</form>
 		</div>
 		<div class="row">
 			<footer class="footer">
