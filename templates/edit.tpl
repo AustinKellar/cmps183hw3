@@ -61,7 +61,7 @@
 					</div>
 					<div class="col-sm-4">
 						<label>Last Updated</label><br>
-						<input name="lastUpdated" type="date" value="{{row['lastUpdated']}}">
+						<input name="lastUpdated" type="date" value="{{row['lastUpdated']}}" disabled>
 					</div>
 					<div class="col-sm-4">
 						<label>Due</label><br>

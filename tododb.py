@@ -12,6 +12,18 @@ def create_table():
 	c.execute('CREATE TABLE tasks(id INTEGER PRIMARY KEY, title varchar(255), notes varchar(255), posted DATE, lastUpdated DATE, due DATE, completed BOOLEAN)')
 	conn.commit()
 
+def drop_filters():
+	c.execute('DROP TABLE filters')
+	conn.commit()
+
+def create_filters():
+	c.execute('CREATE TABLE filters(id INTEGER PRIMARY KEY, filter varchar(255), sort varchar(255))')
+	conn.commit()
+
+def insert_filters():
+	c.execute('INSERT INTO filters(filter, sort) values(NULL, NULL)')
+	conn.commit()
+
 def insert_data():
 	title = 'Create a profile for Peter Parker'
 	notes = 'These are the notes for creating such a profile'
@@ -74,5 +86,8 @@ def query():
 drop_table()
 create_table()
 insert_data()
+drop_filters()
+create_filters()
+insert_filters()
 
 
