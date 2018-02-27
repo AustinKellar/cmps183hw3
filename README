@@ -1,0 +1,13 @@
+To Run:
+
+1) CD into the project folder
+2) Run:
+	python controller.py
+3) Go to the URL:
+	http://localhost:8080/index
+
+If for whatever reason the data isn't loading (which shouldn't happen):
+1) run:
+	python tododb.py
+
+This will re-create the database

@@ -98,7 +98,7 @@
 							</select>
 						%end
 
-						<input type="submit" name="save" value="save">
+						<input type="submit" name="save" value="save" class="marker">
 					</form>
 							
 				</div>

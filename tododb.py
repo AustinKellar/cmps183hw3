@@ -83,10 +83,12 @@ def query():
 	c.execute('SELECT title FROM tasks WHERE id=3')
 	print(c.fetchone()[0])
 
-drop_table()
+# un-comment the drop_tables() if you aren't creating the data for the first time
+
+#drop_table()
 create_table()
 insert_data()
-drop_filters()
+#drop_filters()
 create_filters()
 insert_filters()
 
