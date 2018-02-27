@@ -107,15 +107,16 @@
 				<h2 class="text-center marker underlined">Resources</h2><br>
 				<ol style="padding-right:30px;">
 					<li>
-						How to create a custom AngularJS filter for <a href="https://stackoverflow.com/questions/14478106/angularjs-sorting-by-property">order by</a>
-						table attribute
+						How to send a <a href="https://www.w3schools.com/xml/ajax_xmlhttprequest_send.asp">post</a>
+						request with plain JavaScript
 					</li><br>
 					<li>
-						How to use <a href="https://www.w3schools.com/angular/ng_ng-disabled.asp">ng-disabled</a>
-						to disable textareas conditionally
+						How to  <a href="https://www.w3schools.com/sql/sql_orderby.asp">sort</a>
+						the results of an SQL query
 					</li><br>
 					<li>
-						Getting and setting JS objects from <a href="https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage">local storage</a>
+						How to use <a href="https://docs.python.org/2/library/datetime.html">datetime</a>
+						objects in Python
 					</li>
 				</ol>
 			</div>
