@@ -59,43 +59,43 @@
 					</table>
 					<form action="/list" method="get">
 						%if(not filterby or filterby == ''):
-						<select name="filter">
-							<option value="" selected="selected">Show: All</option>
-							<option value="WHERE completed = 1">Show: Completed</option>
-							<option value="WHERE completed = 0">Show: To Do</option>
-						</select>
+							<select name="filter">
+								<option value="" selected="selected">Show: All</option>
+								<option value="WHERE completed = 1">Show: Completed</option>
+								<option value="WHERE completed = 0">Show: To Do</option>
+							</select>
 						%elif(filterby=='WHERE completed = 1'):
-						<select name="filter">
-							<option value="">Show: All</option>
-							<option value="WHERE completed = 1" selected="selected">Show: Completed</option>
-							<option value="WHERE completed = 0">Show: To Do</option>
-						</select>
+							<select name="filter">
+								<option value="">Show: All</option>
+								<option value="WHERE completed = 1" selected="selected">Show: Completed</option>
+								<option value="WHERE completed = 0">Show: To Do</option>
+							</select>
 						%else:
-						<select name="filter">
-							<option value="">Show: All</option>
-							<option value="WHERE completed = 1">Show: Completed</option>
-							<option value="WHERE completed = 0" selected="selected">Show: To Do</option>
-						</select>
+							<select name="filter">
+								<option value="">Show: All</option>
+								<option value="WHERE completed = 1">Show: Completed</option>
+								<option value="WHERE completed = 0" selected="selected">Show: To Do</option>
+							</select>
 						%end
 
 						%if(sortby == 'ORDER BY posted'):
-						<select name="sort">
-							<option value="ORDER BY posted" selected="selected">Sort By: Posted</option>
-							<option value="ORDER BY lastUpdated">Sort By: Last Updated</option>
-							<option value="ORDER BY due">Sort By: Due</option>
-						</select>
+							<select name="sort">
+								<option value="ORDER BY posted" selected="selected">Sort By: Posted</option>
+								<option value="ORDER BY lastUpdated">Sort By: Last Updated</option>
+								<option value="ORDER BY due">Sort By: Due</option>
+							</select>
 						%elif(sortby == 'ORDER BY lastUpdated'):
-						<select name="sort">
-							<option value="ORDER BY posted">Sort By: Posted</option>
-							<option value="ORDER BY lastUpdated" selected="selected">Sort By: Last Updated</option>
-							<option value="ORDER BY due">Sort By: Due</option>
-						</select>
+							<select name="sort">
+								<option value="ORDER BY posted">Sort By: Posted</option>
+								<option value="ORDER BY lastUpdated" selected="selected">Sort By: Last Updated</option>
+								<option value="ORDER BY due">Sort By: Due</option>
+							</select>
 						%else:
-						<select name="sort">
-							<option value="ORDER BY posted">Sort By: Posted</option>
-							<option value="ORDER BY lastUpdated">Sort By: Last Updated</option>
-							<option value="ORDER BY due" selected="selected">Sort By: Due</option>
-						</select>
+							<select name="sort">
+								<option value="ORDER BY posted">Sort By: Posted</option>
+								<option value="ORDER BY lastUpdated">Sort By: Last Updated</option>
+								<option value="ORDER BY due" selected="selected">Sort By: Due</option>
+							</select>
 						%end
 
 						<input type="submit" name="save" value="save">
